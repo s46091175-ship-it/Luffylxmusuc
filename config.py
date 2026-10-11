@@ -1,5 +1,3 @@
-from os import getenv
-
 class Config:
     def __init__(self):
         self.API_ID = 31072423
@@ -8,12 +6,12 @@ class Config:
         self.BOT_TOKEN = "8704729646:AAFavC9VpyXhnPdECoWDinXjEHqXzGFgrJ0"
         self.MONGO_URL = "mongodb+srv://s46091175_db_user:aOCweoOGDbrzYM6R@cluster0.te58blz.mongodb.net"
 
-        self.LOGGER_ID = int(getenv("LOGGER_ID", 0))
+        self.LOGGER_ID = -1004387348835
         self.OWNER_ID = 8272317035
 
-        self.DURATION_LIMIT = int(getenv("DURATION_LIMIT", 60)) * 60
-        self.QUEUE_LIMIT = int(getenv("QUEUE_LIMIT", 20))
-        self.PLAYLIST_LIMIT = int(getenv("PLAYLIST_LIMIT", 20))
+        self.DURATION_LIMIT = 60 * 60
+        self.QUEUE_LIMIT = 20
+        self.PLAYLIST_LIMIT = 20
 
         self.SESSION1 = "1BVtsOHUBu5T1V45RvohJ5dwIZ0KsVkIgHWGKKHXebpa1AZZbmONT-Lif5na7XCy1uvtjHiofIrC3lKGZmziKDSAuzx9Kx8pzB9G5GV1RNmOPjn8BaWsrnBvKrHgziRH9JC7kmZZvvV9ZL9n1Jaw8QnQv0KP5JdXnWONUOeCLgHf7C4KVZ9UIrNV9w_K_ElgvayEeU6y2OoHGVrTpwwlWMiQBm9wb-7KZZNhe9CWLPzJR00gZ2buFoNQ6CIM3QHsocLcNDeq9sniYMHyfbO3DJZ5QGhvAIAI7bs7ZkGJt9FzcfwjP0w1DSoXNz9AVAnuhIrMt3BpcQ1deoS55zFhM74u2bSjgOAk="
         self.SESSION2 = None
@@ -42,3 +40,4 @@ class Config:
         ]
         if missing:
             raise SystemExit(f"Missing required environment variables: {', '.join(missing)}")
+        
